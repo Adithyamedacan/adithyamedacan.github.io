@@ -266,6 +266,7 @@ main.container {
 
 .content {
     max-width: 1000px;
+    margin: 0;
 }
 
 .content > h1:first-child {
