@@ -30,7 +30,7 @@ navigation:
         url: /docs/collaboration
       - title: Repository Best Practices
         url: /docs/repository-best-practices
-      - title: Organization & Enterprise
+      - title: Organization & Enterprise Best Practices
         url: /docs/organization-enterprise-practices
 
 # Exclude from processing
