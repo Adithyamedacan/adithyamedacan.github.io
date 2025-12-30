@@ -262,6 +262,8 @@ main.container {
     padding: 40px 2rem;
     min-height: calc(100vh - 200px);
     flex: 1;
+    margin: 0;
+    max-width: none;
 }
 
 .content {
