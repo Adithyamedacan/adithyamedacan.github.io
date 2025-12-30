@@ -99,93 +99,6 @@ Implement organization-wide code ownership:
 /schema/ @company/database-team
 ```
 
-### Repository Standards
-
-#### Repository Naming Conventions
-
-```
-# Microservices
-service-user-management
-service-payment-processing
-service-notification
-
-# Libraries
-lib-authentication
-lib-logging
-lib-utilities
-
-# Infrastructure
-infra-terraform-aws
-infra-kubernetes-configs
-infra-monitoring
-
-# Applications
-app-customer-portal
-app-admin-dashboard
-app-mobile-ios
-```
-
-#### Required Repository Files
-
-All repositories must include:
-- `README.md` - Project overview and setup
-- `LICENSE` - License information
-- `CONTRIBUTING.md` - Contribution guidelines
-- `CODE_OF_CONDUCT.md` - Community standards
-- `SECURITY.md` - Security policy
-- `.github/CODEOWNERS` - Code ownership
-- `.github/pull_request_template.md` - PR template
-- `.github/ISSUE_TEMPLATE/` - Issue templates
-
-#### Repository Templates
-
-Create organization templates for:
-- Microservice projects
-- Library/package projects
-- Infrastructure projects
-- Documentation sites
-- Mobile applications
-
-### Branch Protection & Policies
-
-#### Standard Branch Protection Rules
-
-**For `main` branch:**
-```
-✓ Require pull request reviews (minimum 2)
-✓ Dismiss stale reviews when new commits are pushed
-✓ Require review from code owners
-✓ Require status checks to pass before merging
-  - Build/CI
-  - Unit tests
-  - Integration tests
-  - Security scan
-  - Code coverage (minimum 80%)
-✓ Require branches to be up to date before merging
-✓ Require conversation resolution before merging
-✓ Require signed commits
-✓ Require linear history
-✓ Include administrators in restrictions
-✓ Restrict who can push to matching branches
-✓ Allow force pushes: Never
-✓ Allow deletions: Never
-```
-
-**For `develop` branch:**
-```
-✓ Require pull request reviews (minimum 1)
-✓ Require status checks to pass
-✓ Require branches to be up to date
-```
-
-**For `release/*` branches:**
-```
-✓ Require pull request reviews (minimum 2)
-✓ Require review from release managers
-✓ Lock branch after release
-✓ Require signed commits
-```
-
 ### Security & Compliance
 
 #### Security Policies
@@ -202,7 +115,6 @@ Create organization templates for:
    - Use GitHub Secrets for CI/CD
    - Rotate secrets quarterly
    - Enable secret scanning
-   - Use tools like GitGuardian or TruffleHog
 
 3. **Access Control**
    - Enforce 2FA for all organization members
@@ -333,7 +245,7 @@ jobs:
 ```yaml
 # SAML Configuration
 Enterprise SSO Setup:
-  Identity Provider: Okta/Azure AD/Google Workspace
+  Identity Provider: Okta/Azure AD
   Attributes Mapping:
     - email → email
     - displayName → full_name
@@ -342,8 +254,6 @@ Enterprise SSO Setup:
   
   Just-in-Time Provisioning: Enabled
   SCIM Provisioning: Enabled
-  Session Timeout: 8 hours
-  Require Re-authentication: For sensitive operations
 ```
 
 #### Role-Based Access Control (RBAC)
@@ -378,7 +288,7 @@ Compliance Officer (Audit access)
 
 2. **Secrets Management**
    - Enterprise-wide secret scanning
-   - Integration with HashiCorp Vault/AWS Secrets Manager
+   - Use inbuilt GitHub Secret Store or integration with HashiCorp Vault/AWS Secrets Manager
    - Automatic secret rotation
    - Secret access auditing
 
