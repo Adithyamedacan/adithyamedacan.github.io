@@ -91,6 +91,7 @@ body {
     overflow-y: auto;
     z-index: 1000;
     transition: transform 0.3s ease;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
 }
 
 .sidebar-header {
@@ -243,8 +244,11 @@ main.container {
 }
 
 .content {
-    max-width: 900px;
-    margin: 0 auto;
+    max-width: 1000px;
+}
+
+.content > h1:first-child {
+    margin-top: 0;
 }
 
 /* Typography */

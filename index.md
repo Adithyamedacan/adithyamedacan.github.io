@@ -3,7 +3,7 @@ layout: default
 title: Home
 ---
 
-## Welcome to GitHub Documentation
+# Welcome to GitHub Documentation
 
 This documentation is designed to help you understand and effectively use GitHub for version control and collaboration.
 
