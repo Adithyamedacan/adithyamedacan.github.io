@@ -60,11 +60,24 @@ This site is automatically deployed to GitHub Pages when you push to the `main` 
    ---
    ```
 3. Add the page to navigation in `_config.yml`:
-   ```yaml
-   navigation:
-     - title: New Page
-       url: /new-page
-   ```
+
+### Single Menu Item:
+```yaml
+navigation:
+  - title: New Page
+    url: /new-page
+```
+
+### Grouped Menu Item (with collapsible dropdown):
+```yaml
+navigation:
+  - title: Category Name
+    items:
+      - title: New Page
+        url: /docs/new-page
+      - title: Another Page
+        url: /docs/another-page
+```
 
 ## Customization
 
@@ -76,12 +89,13 @@ This site is automatically deployed to GitHub Pages when you push to the `main` 
 
 ## Features
 
-- Responsive navigation with mobile menu
+- Responsive navigation with collapsible dropdown menus
 - Clean, modern design
 - Syntax highlighting for code blocks
 - Card-based home page layout
 - Cross-linked documentation pages
 - Mobile-friendly responsive design
+- Grouped navigation for better organization
 
 ## License
 

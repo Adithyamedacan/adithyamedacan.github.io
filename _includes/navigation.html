@@ -10,11 +10,28 @@
         </button>
         <ul class="nav-menu" id="navMenu">
             {% for item in site.navigation %}
-            <li class="nav-item">
-                <a href="{{ item.url | relative_url }}" 
-                   class="nav-link {% if page.url == item.url %}active{% endif %}">
-                    {{ item.title }}
-                </a>
+            <li class="nav-item {% if item.items %}has-dropdown{% endif %}">
+                {% if item.url %}
+                    <a href="{{ item.url | relative_url }}" 
+                       class="nav-link {% if page.url == item.url %}active{% endif %}">
+                        {{ item.title }}
+                    </a>
+                {% else %}
+                    <a href="#" class="nav-link nav-dropdown-toggle" onclick="toggleDropdown(event, this)">
+                        {{ item.title }}
+                        <span class="dropdown-arrow">▼</span>
+                    </a>
+                    <ul class="nav-dropdown">
+                        {% for subitem in item.items %}
+                        <li class="nav-dropdown-item">
+                            <a href="{{ subitem.url | relative_url }}" 
+                               class="nav-dropdown-link {% if page.url == subitem.url %}active{% endif %}">
+                                {{ subitem.title }}
+                            </a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
             </li>
             {% endfor %}
         </ul>
@@ -29,5 +46,44 @@
     navToggle.addEventListener('click', function() {
         navMenu.classList.toggle('active');
         navToggle.classList.toggle('active');
+    });
+
+    // Dropdown toggle function
+    function toggleDropdown(event, element) {
+        event.preventDefault();
+        event.stopPropagation();
+        
+        const parent = element.parentElement;
+        const dropdown = parent.querySelector('.nav-dropdown');
+        
+        // Close other dropdowns
+        document.querySelectorAll('.nav-item.open').forEach(item => {
+            if (item !== parent) {
+                item.classList.remove('open');
+            }
+        });
+        
+        // Toggle current dropdown
+        parent.classList.toggle('open');
+    }
+
+    // Close dropdowns when clicking outside
+    document.addEventListener('click', function(event) {
+        if (!event.target.closest('.nav-item')) {
+            document.querySelectorAll('.nav-item.open').forEach(item => {
+                item.classList.remove('open');
+            });
+        }
+    });
+
+    // Keep dropdown open if current page is in it
+    document.addEventListener('DOMContentLoaded', function() {
+        const activeLink = document.querySelector('.nav-dropdown-link.active');
+        if (activeLink) {
+            const parentItem = activeLink.closest('.nav-item');
+            if (parentItem) {
+                parentItem.classList.add('open');
+            }
+        }
     });
 </script>
