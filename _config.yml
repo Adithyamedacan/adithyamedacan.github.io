@@ -14,12 +14,12 @@ navigation:
     url: /
   - title: Getting Started
     items:
-      - title: GitHub Products
-        url: /docs/github-products
       - title: Introduction
         url: /docs/getting-started
       - title: Repository Basics
         url: /docs/repository-basics
+      - title: GitHub Products
+        url: /docs/github-products
   - title: Development Workflows
     items:
       - title: Branching & Merging
