@@ -3,8 +3,6 @@ layout: default
 title: Repository Best Practices
 ---
 
-## Repository Best Practices
-
 Follow these industry standards and GitHub best practices for better repository management and development workflows.
 
 ### Repository Setup

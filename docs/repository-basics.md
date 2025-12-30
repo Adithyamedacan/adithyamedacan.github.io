@@ -3,8 +3,6 @@ layout: default
 title: Repository Basics
 ---
 
-## Repository Basics
-
 Understanding the fundamentals of Git repositories and version control.
 
 ### What is a Repository?

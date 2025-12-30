@@ -3,8 +3,6 @@ layout: default
 title: Pull Requests
 ---
 
-## Pull Requests
-
 Learn how to create, review, and manage pull requests effectively.
 
 ### What is a Pull Request?

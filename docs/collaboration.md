@@ -3,8 +3,6 @@ layout: default
 title: Collaboration
 ---
 
-## Collaboration
-
 Learn how to work effectively with teams using GitHub's collaboration features.
 
 ### Team Organization

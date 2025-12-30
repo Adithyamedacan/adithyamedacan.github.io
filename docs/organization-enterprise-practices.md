@@ -3,8 +3,6 @@ layout: default
 title: Organization & Enterprise Best Practices
 ---
 
-## Organization & Enterprise Best Practices
-
 Best practices for managing GitHub at organizational and enterprise scale, covering governance, security, compliance, and operational excellence.
 
 ---

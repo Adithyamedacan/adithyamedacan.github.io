@@ -3,8 +3,6 @@ layout: default
 title: Getting Started
 ---
 
-## Getting Started with GitHub
-
 This guide will help you set up and start using GitHub for your projects.
 
 ### Prerequisites

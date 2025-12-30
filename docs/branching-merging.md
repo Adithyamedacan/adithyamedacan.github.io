@@ -3,8 +3,6 @@ layout: default
 title: Branching & Merging
 ---
 
-## Branching & Merging
-
 Master Git branching strategies and merge workflows for effective version control.
 
 ### What are Branches?
