@@ -11,36 +11,42 @@ Follow these industry standards and GitHub best practices for better development
 
 #### README.md Structure
 
-```markdown
-# Project Name
+A well-structured README should include:
 
-Brief description of the project
+- **Project Title** and description
+- **Table of Contents** for easy navigation
+- **Installation** instructions
+- **Usage** examples
+- **Features** list
+- **Contributing** guidelines
+- **License** information
+
+Example structure:
+```
+# Project Name
+Brief description of what this project does
 
 ## Table of Contents
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
+- Installation
+- Usage
+- Features
+- Contributing
+- License
 
 ## Installation
-```bash
-npm install
-```
+Step-by-step installation guide
 
 ## Usage
-```bash
-npm start
-```
+Examples of how to use the project
 
 ## Features
-- Feature 1
-- Feature 2
+Key features of the project
 
 ## Contributing
-See [CONTRIBUTING.md](CONTRIBUTING.md)
+How to contribute to this project
 
 ## License
-MIT License - see [LICENSE](LICENSE)
+This project is licensed under MIT License
 ```
 
 #### Essential Files
@@ -165,10 +171,10 @@ git push origin --delete feature/new-feature
 - Focused scope
 
 **If PR is too large:**
-- Split into multiple PRs
-- Use feature flags
-- Create sub-tasks
-- Incremental delivery
+- Split into multiple smaller PRs
+- Use feature flags for gradual rollout
+- Create sub-tasks and dependencies
+- Implement incremental delivery
 
 #### PR Description Template
 
@@ -245,25 +251,25 @@ grep -r "console.log" src/
 - [ ] Error handling is proper
 
 **Feedback guidelines:**
-```markdown
-# ❌ Not helpful
-This is bad.
 
-# ✅ Helpful
-This could cause a memory leak with large datasets.
-Consider using a WeakMap instead:
+❌ **Not helpful:** "This is bad."
+
+✅ **Helpful:** "This could cause a memory leak with large datasets. Consider using a WeakMap instead."
+
+❌ **Demanding:** "Change this immediately."
+
+✅ **Suggesting:** "Suggestion: We could simplify this by using array destructuring."
+
+Example of constructive feedback:
 ```javascript
-const cache = new WeakMap();
-```
+// Instead of:
+for (let i = 0; i < items.length; i++) {
+  const item = items[i];
+  // ...
+}
 
-# ❌ Demanding
-Change this immediately.
-
-# ✅ Suggesting
-Suggestion: We could simplify this by using array destructuring:
-```javascript
+// Consider:
 const [first, ...rest] = items;
-```
 ```
 
 ### Security Best Practices
