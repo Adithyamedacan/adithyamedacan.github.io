@@ -10,7 +10,7 @@ This guide will help you set up and start using GitHub for your projects.
 ### Prerequisites
 
 Before you begin, ensure you have:
-- A GitHub account ([Sign up here](https://github.com/join))
+- A GitHub account ([Sign up here](https://github.com/))
 - Git installed on your local machine
 - Basic understanding of command line/terminal
 

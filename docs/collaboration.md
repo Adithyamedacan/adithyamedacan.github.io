@@ -35,11 +35,30 @@ Organization
 
 #### Team Permissions
 
-- **Read**: View and clone
-- **Triage**: Manage issues and PRs
-- **Write**: Push to repository
-- **Maintain**: Manage repository settings
-- **Admin**: Full access
+GitHub provides several permission levels for team members and repository access:
+
+##### Repository-Level Permissions
+
+- **All-repository read**: View and clone all repositories in the organization
+- **All-repository write**: Push to all repositories, create branches, and manage some repository settings
+- **All-repository triage**: Manage issues and pull requests without write access to code
+- **All-repository maintain**: Manage repositories without access to sensitive or destructive actions
+- **All-repository admin**: Full administrative access to all repositories
+
+##### Individual Repository Permissions
+
+- **Read**: View and clone the repository
+- **Triage**: Manage issues and pull requests
+- **Write**: Push to repository and manage issues/PRs
+- **Maintain**: Manage repository settings without access to sensitive actions
+- **Admin**: Full access including repository deletion and settings
+
+##### Organization-Level Permissions
+
+- **Apps manager**: Manage GitHub Apps and OAuth apps for the organization
+- **CI/CD Admin**: Manage CI/CD pipelines and workflows
+- **Security manager**: Manage security alerts and settings across the organization
+- **Enterprise Security Manager**: Manage security policies at the enterprise level
 
 ### Repository Access
 
@@ -59,10 +78,7 @@ Settings → Branches → Add rule
 
 ✓ Require pull request reviews
 ✓ Require status checks to pass
-✓ Require branches to be up to date
-✓ Require conversation resolution
 ✓ Require signed commits
-✓ Include administrators
 ```
 
 ### Code Review Process
