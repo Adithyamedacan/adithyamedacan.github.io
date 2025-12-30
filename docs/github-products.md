@@ -195,34 +195,6 @@ A comprehensive guide to GitHub's enterprise offerings and how to choose the rig
 
 *GitHub product offerings showing the relationship between GitHub.com, Enterprise Cloud (Standard and EMU), and Enterprise Server.*
 
-### Text-Based Hierarchy
-
-<details>
-<summary>Click to expand text version</summary>
-
-```
-GitHub Products
-├── GitHub.com
-│   ├── GitHub Free
-│   ├── GitHub Pro
-│   └── GitHub Team
-│
-└── GitHub Enterprise Server
-    │
-    └── GitHub Enterprise Cloud
-        │
-        ├── GitHub Enterprise Cloud - Standard
-        │   └── Classic Organizations
-        │       ├── Personal Accounts
-        │       └── Optional SAML SSO
-        │
-        └── GitHub Enterprise Cloud - EMU
-            └── Enterprise Managed Users
-                ├── SAML SSO Required
-                └── SCIM Provisioning
-```
-</details>
-
 ### Feature Availability Matrix
 
 | Feature | Enterprise Cloud | Enterprise Cloud EMU | Enterprise Server |
