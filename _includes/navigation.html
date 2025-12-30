@@ -1,14 +1,10 @@
-<nav class="navbar">
-    <div class="container">
-        <div class="nav-brand">
-            <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
-        </div>
-        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-        <ul class="nav-menu" id="navMenu">
+<aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+        <a href="{{ '/' | relative_url }}" class="sidebar-brand">{{ site.title }}</a>
+    </div>
+    
+    <nav class="sidebar-nav">
+        <ul class="nav-menu">
             {% for item in site.navigation %}
             <li class="nav-item {% if item.items %}has-dropdown{% endif %}">
                 {% if item.url %}
@@ -35,17 +31,30 @@
             </li>
             {% endfor %}
         </ul>
-    </div>
-</nav>
+    </nav>
+</aside>
+
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
 
 <script>
-    // Mobile menu toggle
-    const navToggle = document.getElementById('navToggle');
-    const navMenu = document.getElementById('navMenu');
+    // Sidebar toggle for mobile
+    const sidebarToggle = document.getElementById('sidebarToggle');
+    const sidebar = document.getElementById('sidebar');
+    const sidebarOverlay = document.getElementById('sidebarOverlay');
     
-    navToggle.addEventListener('click', function() {
-        navMenu.classList.toggle('active');
-        navToggle.classList.toggle('active');
+    if (sidebarToggle) {
+        sidebarToggle.addEventListener('click', function() {
+            sidebar.classList.toggle('active');
+            sidebarOverlay.classList.toggle('active');
+            document.body.classList.toggle('sidebar-open');
+        });
+    }
+
+    // Close sidebar when clicking overlay
+    sidebarOverlay.addEventListener('click', function() {
+        sidebar.classList.remove('active');
+        sidebarOverlay.classList.remove('active');
+        document.body.classList.remove('sidebar-open');
     });
 
     // Dropdown toggle function
@@ -54,27 +63,10 @@
         event.stopPropagation();
         
         const parent = element.parentElement;
-        const dropdown = parent.querySelector('.nav-dropdown');
-        
-        // Close other dropdowns
-        document.querySelectorAll('.nav-item.open').forEach(item => {
-            if (item !== parent) {
-                item.classList.remove('open');
-            }
-        });
         
         // Toggle current dropdown
         parent.classList.toggle('open');
     }
-
-    // Close dropdowns when clicking outside
-    document.addEventListener('click', function(event) {
-        if (!event.target.closest('.nav-item')) {
-            document.querySelectorAll('.nav-item.open').forEach(item => {
-                item.classList.remove('open');
-            });
-        }
-    });
 
     // Keep dropdown open if current page is in it
     document.addEventListener('DOMContentLoaded', function() {
