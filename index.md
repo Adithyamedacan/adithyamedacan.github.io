@@ -11,7 +11,13 @@ This documentation is designed to help you understand and effectively use GitHub
 
 <div class="card-grid">
     <div class="card">
-        <h3>🚀 Getting Started</h3>
+        <h3>� GitHub Products</h3>
+        <p>Overview of GitHub Enterprise offerings and platform comparison.</p>
+        <a href="{{ '/docs/github-products' | relative_url }}" class="btn">Read More</a>
+    </div>
+    
+    <div class="card">
+        <h3>�🚀 Getting Started</h3>
         <p>Learn the basics of GitHub, creating repositories, and initial setup.</p>
         <a href="{{ '/docs/getting-started' | relative_url }}" class="btn">Read More</a>
     </div>

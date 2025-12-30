@@ -14,6 +14,8 @@ navigation:
     url: /
   - title: Getting Started
     items:
+      - title: GitHub Products
+        url: /docs/github-products
       - title: Introduction
         url: /docs/getting-started
       - title: Repository Basics
