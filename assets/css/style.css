@@ -467,6 +467,18 @@ hr {
 }
 
 /* Responsive Design */
+@media (min-width: 1024px) {
+    .card-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1023px) {
+    .card-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
 @media (max-width: 768px) {
     .main-wrapper {
         margin-left: 0;
