@@ -1,0 +1,33 @@
+<nav class="navbar">
+    <div class="container">
+        <div class="nav-brand">
+            <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-menu" id="navMenu">
+            {% for item in site.navigation %}
+            <li class="nav-item">
+                <a href="{{ item.url | relative_url }}" 
+                   class="nav-link {% if page.url == item.url %}active{% endif %}">
+                    {{ item.title }}
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</nav>
+
+<script>
+    // Mobile menu toggle
+    const navToggle = document.getElementById('navToggle');
+    const navMenu = document.getElementById('navMenu');
+    
+    navToggle.addEventListener('click', function() {
+        navMenu.classList.toggle('active');
+        navToggle.classList.toggle('active');
+    });
+</script>
