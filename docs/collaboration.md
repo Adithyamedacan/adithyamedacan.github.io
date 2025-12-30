@@ -109,7 +109,16 @@ Settings → Branches → Add rule
 
 #### Code Owners
 
-Create `CODEOWNERS` file (For auto assignment of **Reviewers** to PRs):
+The `CODEOWNERS` file is a powerful feature that automatically assigns reviewers to pull requests based on which files are being changed. This ensures that the right people review changes to specific parts of the codebase.
+
+**Why use CODEOWNERS?**
+- **Automatic review assignment**: Automatically requests reviews from the appropriate team members based on file paths
+- **Expertise routing**: Ensures code is reviewed by people with domain expertise in that area
+- **Quality control**: Prevents code from being merged without approval from designated owners
+- **Reduced bottlenecks**: Distributes review responsibilities across teams
+- **Documentation**: Clearly defines who is responsible for different parts of the codebase
+
+Create `CODEOWNERS` file in `.github/` directory:
 
 ```
 # Global owners
