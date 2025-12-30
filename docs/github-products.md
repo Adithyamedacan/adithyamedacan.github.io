@@ -191,34 +191,7 @@ A comprehensive guide to GitHub's enterprise offerings and how to choose the rig
 
 ## Visual Hierarchy
 
-```mermaid
-graph TD
-    A[GitHub Products] --> B[GitHub.com]
-    A --> C[GitHub Enterprise Server]
-    
-    B --> D[GitHub Free]
-    B --> E[GitHub Pro]
-    B --> F[GitHub Team]
-    
-    C --> G[GitHub Enterprise Cloud]
-    
-    G --> H[GitHub Enterprise Cloud - Standard]
-    G --> I[GitHub Enterprise Cloud - EMU]
-    
-    H --> J[Classic Organizations]
-    J --> K[Personal Accounts]
-    J --> L[Optional SAML SSO]
-    
-    I --> M[Enterprise Managed Users]
-    M --> N[SAML SSO Required]
-    M --> O[SCIM Provisioning]
-    
-    style A fill:#1f77d4,stroke:#333,stroke-width:4px,color:#fff
-    style C fill:#d946ef,stroke:#333,stroke-width:3px,color:#fff
-    style G fill:#7c3aed,stroke:#333,stroke-width:3px,color:#fff
-    style H fill:#f59e0b,stroke:#333,stroke-width:2px
-    style I fill:#10b981,stroke:#333,stroke-width:2px
-```
+![GitHub Products Hierarchy]({{ '/assets/images/github-products-hierarchy.png' | relative_url }})
 
 *GitHub product offerings showing the relationship between GitHub.com, Enterprise Cloud (Standard and EMU), and Enterprise Server.*
 
