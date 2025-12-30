@@ -41,9 +41,15 @@ This documentation is designed to help you understand and effectively use GitHub
     </div>
     
     <div class="card">
-        <h3>✨ Best Practices</h3>
-        <p>Follow industry standards and GitHub best practices.</p>
-        <a href="{{ '/docs/best-practices' | relative_url }}" class="btn">Read More</a>
+        <h3>✨ Repository Best Practices</h3>
+        <p>Follow industry standards for repository management and workflows.</p>
+        <a href="{{ '/docs/repository-best-practices' | relative_url }}" class="btn">Read More</a>
+    </div>
+    
+    <div class="card">
+        <h3>🏢 Organization & Enterprise</h3>
+        <p>Best practices for managing GitHub at organizational and enterprise scale.</p>
+        <a href="{{ '/docs/organization-enterprise-practices' | relative_url }}" class="btn">Read More</a>
     </div>
 </div>
 

@@ -28,8 +28,10 @@ navigation:
     items:
       - title: Collaboration
         url: /docs/collaboration
-      - title: Best Practices
-        url: /docs/best-practices
+      - title: Repository Best Practices
+        url: /docs/repository-best-practices
+      - title: Organization & Enterprise
+        url: /docs/organization-enterprise-practices
 
 # Exclude from processing
 exclude:
