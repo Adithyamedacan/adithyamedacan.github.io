@@ -1,3 +1,5 @@
+---
+---
 /* Reset and Base Styles */
 * {
     margin: 0;
@@ -89,9 +91,28 @@ body {
     background-color: var(--text-color);
     color: white;
     overflow-y: auto;
+    overflow-x: hidden;
     z-index: 1000;
     transition: transform 0.3s ease;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Scrollbar styling for sidebar */
+.sidebar::-webkit-scrollbar {
+    width: 8px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5);
 }
 
 .sidebar-header {
