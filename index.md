@@ -45,6 +45,60 @@ This documentation is designed to help you understand and effectively use GitHub
         <p>Follow industry standards and GitHub best practices.</p>
         <a href="{{ '/docs/best-practices' | relative_url }}" class="btn">Read More</a>
     </div>
+    
+    <div class="card">
+        <h3>🔐 Security</h3>
+        <p>Secure your repositories and manage access controls.</p>
+        <a href="{{ '/docs/collaboration' | relative_url }}#security-best-practices" class="btn">Read More</a>
+    </div>
+    
+    <div class="card">
+        <h3>🏷️ Releases & Tags</h3>
+        <p>Version your code and create releases.</p>
+        <a href="{{ '/docs/repository-basics' | relative_url }}#tags-and-releases" class="btn">Read More</a>
+    </div>
+    
+    <div class="card">
+        <h3>📊 Projects & Boards</h3>
+        <p>Organize work with project boards and milestones.</p>
+        <a href="{{ '/docs/collaboration' | relative_url }}#project-management" class="btn">Read More</a>
+    </div>
+    
+    <div class="card">
+        <h3>🔄 GitHub Actions</h3>
+        <p>Automate workflows with CI/CD pipelines.</p>
+        <a href="{{ '/docs/best-practices' | relative_url }}#cicd-best-practices" class="btn">Read More</a>
+    </div>
+    
+    <div class="card">
+        <h3>📝 Issues & Templates</h3>
+        <p>Track bugs and feature requests efficiently.</p>
+        <a href="{{ '/docs/collaboration' | relative_url }}#issue-management" class="btn">Read More</a>
+    </div>
+    
+    <div class="card">
+        <h3>🔍 Code Review</h3>
+        <p>Review code effectively and provide feedback.</p>
+        <a href="{{ '/docs/collaboration' | relative_url }}#code-review-process" class="btn">Read More</a>
+    </div>
+    
+    <div class="card">
+        <h3>🌳 Git Workflows</h3>
+        <p>Master Git Flow and GitHub Flow strategies.</p>
+        <a href="{{ '/docs/branching-merging' | relative_url }}" class="btn">Read More</a>
+    </div>
+    
+    <div class="card">
+        <h3>📚 Documentation</h3>
+        <p>Write clear documentation and maintain wikis.</p>
+        <a href="{{ '/docs/best-practices' | relative_url }}#documentation-best-practices" class="btn">Read More</a>
+    </div>
+    
+    <div class="card">
+        <h3>🧪 Testing</h3>
+        <p>Implement testing strategies and coverage.</p>
+        <a href="{{ '/docs/best-practices' | relative_url }}#testing-best-practices" class="btn">Read More</a>
+    </div>
 </div>
 
 ### What You'll Learn
