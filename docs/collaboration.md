@@ -109,7 +109,7 @@ Settings → Branches → Add rule
 
 #### Code Owners
 
-Create `CODEOWNERS` file:
+Create `CODEOWNERS` file (For auto assignment of **Reviewers** to PRs):
 
 ```
 # Global owners
@@ -236,6 +236,8 @@ Enable GitHub Discussions:
    - Q&A
    - Ideas
    - General
+   - Polls
+   - Show and tell
 
 #### Mentions and Notifications
 
@@ -256,6 +258,7 @@ See also #789
 - Watch: All activity
 - Participating: When mentioned
 - Ignore: No notifications
+- Custom: Select specific events
 
 ### Collaborative Workflows
 
